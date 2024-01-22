@@ -6,7 +6,7 @@ import { Box, Text, Flex, Image } from "@chakra-ui/react";
 
 const testimonialsData = [
   {
-    content:"Finding a job that values my skills and accommodates my visualimpairment used to be a challenge. Thanks to this platform, I landed a fulfilling job in software development. The inclusive job listings and supportive community made all the difference!",
+    content:"Finding a job that values my skills and accommodates my visualimpairment used to be a challenge. Thanks to this platform, I landed a fulfilling job in software development. The supportive community made all the difference!",
         author: "James",
     image:
     "https://topmate.io/_next/image?url=%2Fimages%2Fhomepage%2Ftestimonials%2Fdr_joerg_storm.webp&w=48&q=75",
@@ -24,20 +24,6 @@ const testimonialsData = [
     "As a wheelchair user, I faced obstacles in my job search. This   platform not only offered accessible job listings but also empoweredme with resources on workplace accessibility. I am now managing projects and making a difference!",    author: "Simran",
     image:
       "https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=",
-  },
-  
-  {
-    content:
-    "As a wheelchair user, I faced obstacles in my job search. This   platform not only offered accessible job listings but also empoweredme with resources on workplace accessibility. I am now managing projects and making a difference!",    author: "Aisha",
-    image:
-      "https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=",
-  },
-  {
-    content:
-      "Being neurodivergent made job hunting daunting. This website not only celebrated neurodiversity but also connected me with employers who value diverse perspectives. I'm now expressing my creativity as a graphic designer!",
-    author: "Maya",
-    image:
-      "https://media.istockphoto.com/id/1398385367/photo/happy-millennial-business-woman-in-glasses-posing-with-hands-folded.jpg?s=612x612&w=0&k=20&c=Wd2vTDd6tJ5SeEY-aw0WL0bew8TAkyUGVvNQRj3oJFw=",
   },
   {
     content:

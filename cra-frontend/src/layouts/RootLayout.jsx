@@ -24,10 +24,8 @@ export default function RootLayout() {
           onMouseEnter={() => cursorChangeHandler("hovered")}
           onMouseLeave={() => cursorChangeHandler("")}
         >
-          <h1>Hover over me</h1>
         </div>
       </div>
-      <div className="container" style={{ background: "peachpuff" }}></div>
     </div>
 
     </>
