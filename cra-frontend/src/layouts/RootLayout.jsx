@@ -14,8 +14,6 @@ export default function RootLayout() {
   return (
     <>
       <LandingTop />
-      {/* <Carousel/>
-      <FeatureList/> */}
       <SpeechSynthesizer/>
       <div className="App">
       <CustomCursor />

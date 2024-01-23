@@ -327,6 +327,10 @@ const NAV_ITEMS = [
     to: "/disabilityrightsinfo",
   },
   {
+    label: "Browse Talent",
+    to: "/browse",
+  },
+  {
     label: "Feedback",
     to: "/feedback",
   },
