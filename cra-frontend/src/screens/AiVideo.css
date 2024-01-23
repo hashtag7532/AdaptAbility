@@ -1,0 +1,29 @@
+.aivideo-main {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  padding-top: 1rem;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.aivideo-contents {
+  /* width: 350px;
+  padding: 25px; */
+  flex: 0.3;
+}
+
+.li-selected {
+  color: green;
+  cursor: pointer;
+}
+
+.aivideo-video {
+  /* padding: 25px; */
+  padding-top: 1rem;
+  flex: 1;
+}
+.aivideo-ques {
+  /* padding: 25px; */
+  flex: 1;
+}
