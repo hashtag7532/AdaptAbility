@@ -70,7 +70,7 @@ function WithSubnavigation() {
               fontWeight={"bold"}
               ml={[0, 12]}
             >
-              सहAIता
+              AdaptAbility
             </Text> */}
             <span
               style={{
@@ -79,7 +79,7 @@ function WithSubnavigation() {
                 fontSize: "40px",
               }}
             >
-              सह<span style={{ color: "#3261ff" }}>AI</span>ता
+              Adapt<span style={{ color: "#3261ff" }}>Ability</span>
             </span>
           </Link>
           <Spacer />

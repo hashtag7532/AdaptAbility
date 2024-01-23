@@ -53,7 +53,7 @@ export default function LargeWithLogoLeft() {
         >
           <Stack spacing={3}>
             <Box>
-              <Text fontWeight="bold">सहAIता</Text>
+              <Text fontWeight="bold">AdaptAbility</Text>
               {/* <Logo color={useColorModeValue('gray.700', 'white')} /> */}
             </Box>
             <Text fontSize={"sm"}>© 2024 All rights reserved</Text>
@@ -61,7 +61,7 @@ export default function LargeWithLogoLeft() {
               Need assistance with our website? Feel free to reach out to us at
               <a
                 style={{
-                  color: "#2234da",
+                  color: "#2234da", 
                   paddingLeft: "0.35rem",
                   paddingRight: "0.35rem",
                   fontWeight: 500,

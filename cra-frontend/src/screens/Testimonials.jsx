@@ -57,7 +57,7 @@ const Testimonials = () => {
       >
         <div>People loving using </div>
         <h1 color="#ffcf36" fontWeight="bolder" ml="0.5rem" pt="0.3rem">
-          सह<span style={{ color: "#3261ff" }}>AI</span>ता
+          Adapt<span style={{ color: "#3261ff" }}>Ability</span>
         </h1>
       </Flex>
       <Flex direction={{ base: "column", md: "row" }} gap="1rem">

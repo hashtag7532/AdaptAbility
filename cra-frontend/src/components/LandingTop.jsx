@@ -66,7 +66,7 @@ export default function LandingTop() {
             Make an Appointment
           </a>
           <a
-            href="https://www.google.com/maps/dir//Kandivali,+Parekh+Nagar,+Kandivali+West,+Mumbai,+Maharashtra+400067/@19.2532561,72.7393277,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3be7b6d9ad5ea375:0x1e13b7a8edf22afe!2m2!1d72.8493324!2d19.2066847!3e2?entry=ttu"
+            href="https://www.google.com/maps/place/SJT,+VIT+University,+Vellore,+Tamil+Nadu+632014/@12.9710279,79.1613698,17z/data=!3m1!4b1!4m6!3m5!1s0x3bad47a28d145d6f:0xd1465a973c93afe3!8m2!3d12.9710227!4d79.1639447!16s%2Fg%2F11c3q3j7vt?entry=ttu"
             className="btn btn2"
             style={{ textDecoration: "none" }}
           >
@@ -196,7 +196,7 @@ export default function LandingTop() {
         </div>
 
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfNcTB41jQPWYFckTmcPfo7LNhTWmh7BrNU54vgDaD_BJ3Q4Q/viewform?usp=sf_link"
+          href=""
           className="btn3 "
           style={{ textDecoration: "none" }}
         >

@@ -33,7 +33,7 @@ const AiCourse = () => {
       headers: {
         "Content-Type": "application/json",
         authorization:
-          `Bearer ${process.env.REACT_APP_EDENV_API_KEY}`,
+          `Bearer ${process.env.REACT_APP_EDENS_API_KEY}`,
       },
       body: JSON.stringify({
         providers: "openai",
