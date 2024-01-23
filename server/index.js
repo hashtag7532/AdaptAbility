@@ -7,7 +7,6 @@ app.use(cors({
     origin: '*'
 }))
 app.use(express.json());
-
 app.get('/', (req, res) => {
   res.send('Hello World!');
 })
@@ -23,13 +22,13 @@ app.get('/jobs', async (req, res) => {
     const serpApiUrl = 'https://serpapi.com/search';
     const response = await axios.get(serpApiUrl, {
       params: {
-  api_key: "98a1671d5b1c1efae84bf3516820fab33875cb7a4e541c9fa4ddc6523eadeb98",
-  engine: "google_jobs",
-  lrad: "0",
-  q: query,
-  google_domain: "google.com",
-  gl: "in"
-}
+        api_key: "98a1671d5b1c1efae84bf3516820fab33875cb7a4e541c9fa4ddc6523eadeb98",
+        engine: "google_jobs",
+        lrad: "0",
+        q: query,
+        google_domain: "google.com",
+        gl: "in"
+      }
     });
 
     res.json(response.data);

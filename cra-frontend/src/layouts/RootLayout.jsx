@@ -1,7 +1,7 @@
 import React from "react";
-// import VoiceButton from "../components/VoiceButton";
-// import SpeechSynthesizer from "../components/SpeechSynthesizer";
-// import CustomCursor from "../components/CustomCursor";
+import VoiceButton from "../components/VoiceButton";
+import SpeechSynthesizer from "../components/SpeechSynthesizer";
+import CustomCursor from "../components/CustomCursor";
 
 import { useContext } from "react";
 import { MouseContext } from "../context/mouse-context";
@@ -16,16 +16,18 @@ export default function RootLayout() {
       <LandingTop />
       {/* <Carousel/>
       <FeatureList/> */}
-      {/* <SpeechSynthesizer/> */}
+      <SpeechSynthesizer/>
       <div className="App">
-      {/* <CustomCursor /> */}
+      <CustomCursor />
       <div className="container">
         <div
           onMouseEnter={() => cursorChangeHandler("hovered")}
           onMouseLeave={() => cursorChangeHandler("")}
         >
+          <h1>Hover over me</h1>
         </div>
       </div>
+      <div className="container" style={{ background: "peachpuff" }}></div>
     </div>
 
     </>
