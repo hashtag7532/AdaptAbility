@@ -35,22 +35,22 @@ const LanguageButtons = () => {
     // Add more languages as needed
   ];
 
-  return (
-    <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={4} width="full">
-      {languages.map((language) => (
-        <Button
-          key={language.code}
-          width="full"
-          colorScheme="teal"
-          size={"lg"}
-          onFocus={() =>
-            SpeechRecognition.startListening({ language: language.code })
-          }
-        >
-          <Text fontSize="lg">{language.name}</Text>
-        </Button>
-      ))}
-    </SimpleGrid>
+  return (<></>
+    // <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={4} width="full">
+    //   {languages.map((language) => (
+    //     <Button
+    //       key={language.code}
+    //       width="full"
+    //       colorScheme="teal"
+    //       size={"lg"}
+    //       onFocus={() =>
+    //         SpeechRecognition.startListening({ language: language.code })
+    //       }
+    //     >
+    //       <Text fontSize="lg">{language.name}</Text>
+    //     </Button>
+    //   ))}
+    // </SimpleGrid>
   );
 };
 
@@ -98,89 +98,109 @@ const VoiceButton = () => {
     console.log(transcript, parsingText);
     if (parsingText.includes("dashboard") && !confirmation) {
       setCurrentLink("dashboard");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("job") && !confirmation) {
       setCurrentLink("jobs");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("home") && !confirmation) {
       setCurrentLink("");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (
       parsingText.includes("" || parsingText.includes("employee")) &&
       !confirmation
     ) {
       setCurrentLink("profile/:name");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("virtual assistant") && !confirmation) {
       setCurrentLink("virtualassistant");
+      navigate(`/${currentLink}`);
     } else if (parsingText.includes("ai course") && !confirmation) {
       setCurrentLink("aicourse");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("resume") && !confirmation) {
       setCurrentLink("resumebuilder");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("blog") && !confirmation) {
       setCurrentLink("blog");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("speech") && !confirmation) {
       setCurrentLink("speech");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("web") && !confirmation) {
       setCurrentLink("web");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("rights") && !confirmation) {
       setCurrentLink("disabilityrightsinfo");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("video") && !confirmation) {
       setCurrentLink("aivideo");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("ocr") && !confirmation) {
       setCurrentLink("ocr");
+      navigate(`/${currentLink}`);
       stopListening();
-    } else if (parsingText.includes("community") && !confirmation) {
-      setCurrentLink("community");
+    } else if (parsingText.includes("dashboard") && !confirmation) {
+      setCurrentLink("dashboard");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("feedback") && !confirmation) {
       setCurrentLink("feedback");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("browse") && !confirmation) {
       setCurrentLink("browse");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("community") && !confirmation) {
       setCurrentLink("community");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (parsingText.includes("feedback") && !confirmation) {
       setCurrentLink("feedback");
+      navigate(`/${currentLink}`);
       stopListening();
     } else if (
       (parsingText.includes("yes") || parsingText.includes("yeah")) &&
       !confirmation
     ) {
-      handleConfirmation(true);
+      //handleConfirmation(true);
       stopListening();
     } else if (
       (parsingText.includes("no") || parsingText.includes("nah")) &&
       !confirmation
     ) {
-      handleConfirmation(false);
+      //handleConfirmation(false);
       stopListening();
     }
 
-    if (currentLink != "" && !said) {
-      const initialSpeech =
-        "Do you want to navigate to " + currentLink + "? Please say yes or no.";
-      const initialUtterance = new SpeechSynthesisUtterance(initialSpeech);
+    navigate(`/${currentLink}`);
 
-      initialUtterance.onend = () => {
-        setSaid(1);
-        // Speech synthesis has ended, set isListening to true
-        startListening();
-        // setIsListening(true);
-      };
+    // if (currentLink != "" && !said) {
+    //   const initialSpeech =
+    //     "Do you want to navigate to " + currentLink + "? Please say yes or no.";
+    //   const initialUtterance = new SpeechSynthesisUtterance(initialSpeech);
 
-      window.speechSynthesis.speak(initialUtterance);
-    }
-  }, [transcript, confirmation]);
+    //   initialUtterance.onend = () => {
+    //     setSaid(1);
+    //     // Speech synthesis has ended, set isListening to true
+    //     startListening();
+    //     // setIsListening(true);
+    //   };
+
+    //   window.speechSynthesis.speak(initialUtterance);
+    // }
+  }, [transcript, confirmation, currentLink]);
 
   if (!browserSupportsSpeechRecognition) {
     setStatus("Your browser does not support speech recognition.");
@@ -192,7 +212,7 @@ const VoiceButton = () => {
         icon={<FaMicrophone />}
         aria-label="Voice Button"
         onClick={() => {
-          const initialSpeech = "Voice Assistant How may I help you today?";
+          const initialSpeech = "Voice assistant, How may i help you today?";
           const initialUtterance = new SpeechSynthesisUtterance(initialSpeech);
           window.speechSynthesis.speak(initialUtterance);
 

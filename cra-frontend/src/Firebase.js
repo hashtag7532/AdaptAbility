@@ -4,12 +4,12 @@ import {GoogleAuthProvider,getAuth} from "firebase/auth"
 import {getFirestore} from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCh_nE7zEUkRLpAAEF7HLHE9MevNDRvutE",
-  authDomain: "disability-7d311.firebaseapp.com",
-  projectId: "disability-7d311",
-  storageBucket: "disability-7d311.appspot.com",
-  messagingSenderId: "543214743227",
-  appId: "1:543214743227:web:8307604e15125a4d9d439e"
+  apiKey: "AIzaSyAnE-fxBBrbVxKLq8Net8QWE4_tSLSgpeE",
+  authDomain: "adaptability-f7b2a.firebaseapp.com",
+  projectId: "adaptability-f7b2a",
+  storageBucket: "adaptability-f7b2a.appspot.com",
+  messagingSenderId: "692035188659",
+  appId: "1:692035188659:web:02a0f61bff3bce0cdd3dc6"
 };
 
 // Initialize Firebase

@@ -6,7 +6,7 @@ const TextReader = ({  isEnabled = true,children }) => {
 
   const handleSelection = () => {
     const selection = window.getSelection();
-    const text = selection.toString().trim();
+    const text = selection?.toString()?.trim();
     setSelectedText(text);
 
     if (text) {
@@ -20,7 +20,7 @@ const TextReader = ({  isEnabled = true,children }) => {
   };
 
   const handleWordFocus = (e) => {
-    const text = e.target.innerText.trim();
+    const text = e.target?.innerText?.trim();
     setSelectedText(text);
 
     if (text) {

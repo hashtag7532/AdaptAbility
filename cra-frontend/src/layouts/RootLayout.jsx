@@ -14,7 +14,6 @@ export default function RootLayout() {
   return (
     <>
       <LandingTop />
-      <SpeechSynthesizer/>
       <div className="App">
       <CustomCursor />
       <div className="container">
@@ -22,7 +21,6 @@ export default function RootLayout() {
           onMouseEnter={() => cursorChangeHandler("hovered")}
           onMouseLeave={() => cursorChangeHandler("")}
         >
-          <h1>Hover over me</h1>
         </div>
       </div>
       <div className="container" style={{ background: "peachpuff" }}></div>

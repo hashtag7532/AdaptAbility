@@ -81,13 +81,13 @@ const AccessibilityGrid = (props) => {
       },
     },
     { icon: <IoText />, label: "Text Spacing" },
-    {
-      icon: paused ? <IoPaperPlane /> : <IoPauseOutline />,
-      label: paused ? "Resume Animations" : "Pause Animations",
-      func: () => {
-        isPaused(!paused);
-      }},
-    { icon: <IoEyeOffOutline />, label: "Hide Images" },
+    // {
+    //   icon: paused ? <IoPaperPlane /> : <IoPauseOutline />,
+    //   label: paused ? "Resume Animations" : "Pause Animations",
+    //   func: () => {
+    //     isPaused(!paused);
+    //   }},
+    // { icon: <IoEyeOffOutline />, label: "Hide Images" },
     { icon: <IoReaderOutline />, label: "Dyslexia Friendly" },
     { icon: <IoResizeOutline />, label: "Line Height" },
     { icon: <IoTextOutline />, label: "Text Align" },

@@ -38,20 +38,6 @@ const BrowseTalent = () => {
         <div style={{ fontWeight: "bold", fontSize: "1.5rem" }}>
           Browse Talent
         </div>
-        <div>
-          <Button
-            variant="outline"
-            style={{
-              fontSize: "0.7rem",
-              padding: "0.5rem",
-              paddingTop: "0",
-              paddingBottom: "0",
-            }}
-            color="#2234da"
-          >
-            Meeting in 15 mins
-          </Button>
-        </div>
       </div>
       <div
         style={{

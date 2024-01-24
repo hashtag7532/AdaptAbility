@@ -109,7 +109,7 @@ const Signup = () => {
                     name="signupName"
                     value={formData.signupName}
                     onChange={handleInputChange}
-                    placeholder="Eg. Shreyans Jain"
+                    placeholder="Eg. Parth Dodia"
                     fontSize="0.75rem"
                   />
                 </FormControl>
@@ -125,7 +125,7 @@ const Signup = () => {
                     value={formData.signupEmail}
                     onChange={handleInputChange}
                     bg={"white"}
-                    placeholder="Eg. shreyans@gmail.com"
+                    placeholder="Eg. parth@gmail.com"
                     fontSize="0.75rem"
                   />
                 </FormControl>
@@ -224,7 +224,7 @@ const Signup = () => {
                 fontWeight: "bolder",
               }}
             >
-              सह<span style={{ color: "#3261ff" }}>AI</span>ता
+              Adapt<span style={{ color: "#3261ff" }}>Ability</span>
             </h1>
             <img
               src={loader}

@@ -9,25 +9,55 @@ const AIchatbotRights = () => {
 
   const handleGenerateText = async () => {
     try {
-      const headersList = {
-        Accept: "/",
-        // "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-        "Content-Type": "application/json",
-      };
-
-      const bodyContent = {
-        promptString: promptString,
-      };
-
-      const response = await axios.post(
-        "https://ai-endpoint-git-main-ritojnan.vercel.app/generatetext",
-        bodyContent,
+      const response = await fetch(
+        "https://api.edenai.run/v2/text/generation",
         {
-          headers: headersList,
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            authorization:
+              `Bearer ${process.env.REACT_APP_EDENS_API_KEY}`,
+          },
+          body: JSON.stringify({
+            providers: "google",
+            text: `Consider yourself a legal advisor for specially abled people, provide me with legal opinion to the prompt ${promptString}, do not give any salutiation`,
+            temperature: 0.2,
+            max_tokens: 300,
+            fallback_providers: "",
+          }),
         }
       );
 
-      setGeneratedText(response.data);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const data = await response.json();
+      const enhancedText = data.google.generated_text;
+      setGeneratedText(() => {
+        const enhancedAnswer = enhancedText.replace(/\*/g, " ");
+        return enhancedAnswer;
+      });
+
+
+      // const headersList = {
+      //   Accept: "/",
+      //   // "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+      //   "Content-Type": "application/json",
+      // };
+
+      // const bodyContent = {
+      //   promptString: promptString,
+      // };
+
+      // const response = await axios.post(
+      //   "https://ai-endpoint-git-main-ritojnan.vercel.app/generatetext",
+      //   bodyContent,
+      //   {
+      //     headers: headersList,
+      //   }
+      // );
+
+      // setGeneratedText(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }

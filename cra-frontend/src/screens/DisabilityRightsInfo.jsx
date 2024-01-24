@@ -16,19 +16,9 @@ const DisabilityRightsInfo = () => {
       desc: "Initiative facilitating access to employment services and vocational rehabilitation for Social Security disability beneficiaries.",
     },
     {
-      section: "Schemes",
-      title: "Work Opportunity Tax Credit (WOTC)",
-      desc: "Tax credit for employers hiring individuals from certain target groups, including people with disabilities.",
-    },
-    {
       section: "Benefits",
       title: "Employee Assistance Programs (EAP)",
       desc: "Access to counseling and support services for personal and work-related issues.",
-    },
-    {
-      section: "Benefits",
-      title: "Disability Insurance Benefits",
-      desc: "Some employers offer disability insurance, providing income replacement in the event of a disability preventing work.",
     },
     {
       section: "Rights",
@@ -46,21 +36,6 @@ const DisabilityRightsInfo = () => {
       desc: "Right to the confidentiality of medical information and protection from unnecessary inquiries about disability.",
     },
     {
-      section: "Rights",
-      title: "Job Protection",
-      desc: "Right to protection against retaliation for asserting rights under disability anti-discrimination laws.",
-    },
-    {
-      section: "Schemes",
-      title: "Social Security Disability Insurance (SSDI)",
-      desc: "Government program providing financial support to individuals with disabilities who are unable to work.",
-    },
-    {
-      section: "Schemes",
-      title: "Vocational Rehabilitation Services",
-      desc: "State-funded programs offering rehabilitation services and job placement assistance for individuals with disabilities.",
-    },
-    {
       section: "Schemes",
       title: "Job Accommodation Network (JAN)",
       desc: "Free consulting service providing information on workplace accommodations and disability employment issues.",
@@ -69,16 +44,6 @@ const DisabilityRightsInfo = () => {
       section: "Benefits",
       title: "Health Insurance Protections",
       desc: "Access to health insurance coverage without discrimination based on disability, under the Affordable Care Act.",
-    },
-    {
-      section: "Benefits",
-      title: "Flexible Work Arrangements",
-      desc: "Benefit from flexible work schedules and telecommuting options, promoting work-life balance.",
-    },
-    {
-      section: "Benefits",
-      title: "Training and Career Development",
-      desc: "Opportunities for training, skill development, and career advancement to enhance employability.",
     },
   ]);
   return (
@@ -117,16 +82,6 @@ const DisabilityRightsInfo = () => {
           onClick={() => setCurrentPage("Educational Content")}
         >
           Educational Content
-        </div>
-        <div
-          style={{
-            textDecoration:
-              currentPage === "Legal Resources" ? "underline" : "none",
-            color: currentPage === "Legal Resources" ? "#e38a43" : "#2234da",
-          }}
-          onClick={() => setCurrentPage("Legal Resources")}
-        >
-          Legal Resources
         </div>
         <div
           style={{
