@@ -3,7 +3,6 @@ import {
   Box,
   Flex,
   Modal,
-  SimpleGrid,
   ModalOverlay,
   ModalContent,
   ModalHeader,
@@ -13,11 +12,6 @@ import {
   useDisclosure,
   Input,
   Badge,
-  Radio,
-  RadioGroup,
-  IconButton,
-  Slider,
-  Stack,
   Button,
   Text,
   Icon,
@@ -77,127 +71,6 @@ const FilterBox = ({ filterFunction }) => {
     setExperience("");
     handleFilterChange();
   };
-
-  return (
-    <Box
-      p={[0, 4]}
-      m={[0, 4]}
-      boxShadow="xl"
-      py={[0, 6, 12]}
-      rounded="lg"
-      textAlign="left"
-    >
-      <Box display={{ base: "inline", md: "none" }}>
-        <Button
-          leftIcon={<Icon as={FaFilter} />}
-          colorScheme="teal"
-          variant="solid"
-          width="full"
-          onClick={onOpen}
-        >
-          Filter
-        </Button>
-      </Box>
-
-      <Box display={{ base: "none", md: "inline" }}>
-        <strong>Position:</strong>
-        <Input
-          placeholder="Search by position"
-          value={position}
-          onChange={(e) => setPosition(e.target.value)}
-          mb={2}
-        />
-
-        <Box mb={2}>
-          <Box>
-            <strong>Locations:</strong>
-          </Box>
-          {locations.map((location) => (
-            <Badge key={location} variant="outline" colorScheme="teal" mr={2}>
-              {location}
-            </Badge>
-          ))}
-          <Input
-            placeholder="Add location"
-            value={locations}
-            onChange={(e) => setLocations([...locations, e.target.value])}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                setLocations([...locations, e.target.value]);
-              }
-            }}
-          />
-        </Box>
-
-        <Box mb={2}>
-          <strong>Work Type:</strong>
-          <RadioGroup value={workType} onChange={(e) => setWorkType(e)}>
-            <Stack direction="column">
-              <Radio value="remote">Work from Home</Radio>
-              <Radio value="partTime">Part Time</Radio>
-              <Radio value="hybrid">Hybrid</Radio>
-            </Stack>
-          </RadioGroup>
-        </Box>
-
-        <Box mb={2}>
-          <strong>Salary Range:</strong>
-          <Slider
-            colorScheme="teal"
-            min={0}
-            max={1000000}
-            step={10000}
-            value={salary}
-            onChange={(value) => setSalary(value)}
-          />
-          {`₹${salary[0]} - ₹${salary[1]}`}
-        </Box>
-
-        <Box mb={2}>
-          <strong>Years of Experience:</strong>
-          <Input
-            placeholder="Enter experience"
-            value={experience}
-            onChange={(e) => setExperience(e.target.value)}
-          />
-        </Box>
-
-        <Button
-          colorScheme="teal"
-          onClick={handleFilterChange}
-          mb={2}
-          width="full"
-          leftIcon={<Icon as={TiTick} />}
-        >
-          Include
-        </Button>
-
-        <Button
-          variant="outline"
-          colorScheme="red"
-          onClick={handleClearAll}
-          width="full"
-          leftIcon={<Icon as={FaTrash} />}
-        >
-          Clear All
-        </Button>
-      </Box>
-
-      {/* Modal for smaller screens */}
-      <Modal isOpen={isOpen} onClose={onClose} size="full">
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Filter Box</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            {/* Render the same content as in the Box for smaller screens */}
-            {/* ... */}
-          </ModalBody>
-        </ModalContent>
-      </Modal>
-    </Box>
-  );
 };
 
 const JobList = ({ jobs }) => {
@@ -463,12 +336,9 @@ const JobBoard = () => {
   return (
     <Container maxW="container.xl">
       {/* Adjusted grid template columns for responsiveness */}
-      <Grid templateColumns={{ base: "1fr", md: "2fr 3fr" }} gap={4}>
+      <Grid templateColumns={{ base: "2fr", md: "2fr 3fr" }} gap={2}>
         <GridItem>
-          <FilterBox filterFunction={handleFilter} />
-        </GridItem>
-        <GridItem>
-        <Container maxW="xl">
+        <Container maxW="full">
         <Box p={6} boxShadow="lg" rounded="lg">
           <Input
             placeholder="Enter search query"
@@ -481,7 +351,6 @@ const JobBoard = () => {
           </Button>
         </Box>
       </Container>
-
           <JobList jobs={filteredJobs} />
         </GridItem>
       </Grid>
